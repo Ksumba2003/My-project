@@ -403,7 +403,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2728,6 +2728,7 @@ MonoBehaviour:
   player: {fileID: 1830647794}
   inventoryContainer: {fileID: 11400000, guid: 6df17e5416ab6db4d811df2fc4d280e7, type: 2}
   dragAndDropController: {fileID: 1397206053}
+  timeController: {fileID: 1397206057}
 --- !u!4 &1397206052
 Transform:
   m_ObjectHideFlags: 0
@@ -2801,6 +2802,7 @@ MonoBehaviour:
   plowed: {fileID: 11400000, guid: 0bdc3b42267ad0d48af2dfd31e2f2351, type: 2}
   seeded: {fileID: 11400000, guid: 79853ffc3994be844afc2828b14f6b0c, type: 2}
   targetTilemap: {fileID: 260504804}
+  cropsSpritePrefab: {fileID: 8784858452160551989, guid: 21b7f17ba871e924e88c9f938fa82790, type: 3}
 --- !u!114 &1397206057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2875,7 +2877,8 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   dayLightColor: {r: 0.9924528, g: 0.97247297, b: 0.8819722, a: 1}
-  timeScale: 4500
+  timeScale: 3000
+  startAtTime: 0
   text: {fileID: 517667377}
   globalLight: {fileID: 1727817788}
 --- !u!224 &1582668116 stripped

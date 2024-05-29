@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cb80e9701ee514fafe5db78e61033b, type: 3}
   m_Name: Crop
   m_EditorClassIdentifier: 
-  timeToGrow: 10
-  yield: {fileID: 0}
+  timeToGrow: 20
+  yield: {fileID: 11400000, guid: 90195d43536e1e346afa339c113e6968, type: 2}
   count: 1
+  sprites:
+  - {fileID: 0}
+  - {fileID: -1756639026, guid: e1839de213fe8ea4eb75171825000dee, type: 3}
+  - {fileID: 730508665, guid: e1839de213fe8ea4eb75171825000dee, type: 3}
+  - {fileID: 721918967, guid: e1839de213fe8ea4eb75171825000dee, type: 3}
+  growthStageTime: 04000000070000000d00000014000000
