@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97c20f7cb4ac2854585d3662a9a5041c, type: 3}
-  m_Name: Pickaxe
+  m_Name: Seeds
   m_EditorClassIdentifier: 
-  Name: Pickaxe
-  stackable: 0
-  icon: {fileID: 1746470412, guid: 846fbbe593f1b2744b8108e84712cc70, type: 3}
-  onAction: {fileID: 11400000, guid: 83d719670d00fab4c95b378dd5bfc35b, type: 2}
-  onTileMapAction: {fileID: 11400000, guid: 73fe759c9d974f5408f5f35820bb964b, type: 2}
+  Name: Seeds
+  stackable: 1
+  icon: {fileID: -1129563821, guid: e1839de213fe8ea4eb75171825000dee, type: 3}
+  onAction: {fileID: 0}
+  onTileMapAction: {fileID: 11400000, guid: 6584f6c3283598e49a5c9620f1d28997, type: 2}
+  onItemUsed: {fileID: 11400000, guid: 6584f6c3283598e49a5c9620f1d28997, type: 2}

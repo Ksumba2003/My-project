@@ -11,7 +11,7 @@ public class ToolsCharacterController : MonoBehaviour
     ToolBarController toolbarController;
     Animator animator;
     [SerializeField] float offsetDistance = 1f;
-    [SerializeField] float sizeOfInteractebleArea = 1.2f;
+    [SerializeField] private float sizeOfInteractebleArea = 1.2f;
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
     [SerializeField] float mixDistance = 1.5f;
@@ -80,19 +80,38 @@ public class ToolsCharacterController : MonoBehaviour
         
         bool complete = item.onAction.OnApply(position);
 
+        if (complete == true)
+        {
+            if (item.onItemUsed != null)
+            {
+                item.onItemUsed.OnItemUsed(item, GameManager.Instance.inventoryContainer);
+            }
+        }
+
         return complete;
     }
 
     private void UseToolGrid()
     {
+        Debug.Log("Using tool");
+
         if (selectable == true)
         {
+            Debug.Log("selectable");
             Item item = toolbarController.GetItem;
             if (item == null) { return; }
             if (item.onTileMapAction == null) { return; }
-
+            Debug.Log(item);
             animator.SetTrigger("act_pickaxe");
             bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController);
+
+            if(complete == true)
+            {
+                if(item.onItemUsed != null)
+                {
+                    item.onItemUsed.OnItemUsed(item, GameManager.Instance.inventoryContainer);
+                }
+            }
         }
     }
 }

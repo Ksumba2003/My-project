@@ -10,9 +10,10 @@ public class PlowTile : ToolAction
     public override bool OnApplyToTileMap(Vector3Int gridPosition, TileMapReadController tileMapReadController)
     {
         TileBase tileToPlow = tileMapReadController.GetTileBase(gridPosition);
-
+        Debug.Log(tileToPlow);
         if (canPlow.Contains(tileToPlow) == false)
         {
+            Debug.Log("Not plowable");
             return false;
         }
 

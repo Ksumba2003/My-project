@@ -29,6 +29,6 @@ public class TileMapReadController : MonoBehaviour
     {
         TileBase tile = tilemap.GetTile(gridPosition);
 
-        return null;
+        return tile;
     }
 }

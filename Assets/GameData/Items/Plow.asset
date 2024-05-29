@@ -16,4 +16,4 @@ MonoBehaviour:
   stackable: 0
   icon: {fileID: 1746470412, guid: 846fbbe593f1b2744b8108e84712cc70, type: 3}
   onAction: {fileID: 0}
-  onTileMapAction: {fileID: 11400000, guid: 1537d20c9dc02684f9e2894a9e53b030, type: 2}
+  onTileMapAction: {fileID: 11400000, guid: 73fe759c9d974f5408f5f35820bb964b, type: 2}
