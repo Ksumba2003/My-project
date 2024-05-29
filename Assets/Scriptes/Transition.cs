@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum TransitionType
+{
+    Warp, 
+    Scene
+}
+
 public class Transition : MonoBehaviour
 {
     Transform destination;
