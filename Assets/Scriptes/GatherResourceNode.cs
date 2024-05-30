@@ -9,7 +9,8 @@ public enum ResourceNodeType
     Tree,
     Ore,
     Apple,
-    Strawberry
+    Strawberry,
+    Wheat
 }
 [CreateAssetMenu(menuName ="Data/ToolAction/Gather Resource Node")]
 public class GatherResourceNode : ToolAction

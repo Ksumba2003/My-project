@@ -47,6 +47,9 @@ public class CropsManager : TimeAgent
             if (cropTile.growTimer >= cropTile.crop.timeToGrow)
             {
                 Debug.Log("I'm done growing");
+                cropTile.renderer.sprite = null;
+                crops.Remove(cropTile.renderer.transform);
+                Instantiate(cropTile.crop.prefab, cropTile.renderer.transform);
                 cropTile.crop = null;
             }
         }
@@ -61,6 +64,7 @@ public class CropsManager : TimeAgent
     {
         if (crops.ContainsKey((Vector2Int)position))
         {
+            Debug.Log("Alredy plowed");
             return;
         }
 
@@ -81,8 +85,8 @@ public class CropsManager : TimeAgent
 
         GameObject go = Instantiate(cropsSpritePrefab);
         go.transform.position = targetTilemap.CellToWorld(position);
-        go.transform.position -= Vector3.forward * 0.01f; 
-       go.SetActive(false);
+        go.transform.position -= Vector3.forward * 0.01f;
+        go.SetActive(false);
         crop.renderer = go.GetComponent<SpriteRenderer>();
 
         targetTilemap.SetTile(position, plowed);
