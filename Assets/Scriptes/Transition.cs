@@ -47,7 +47,7 @@ public class Transition : MonoBehaviour
                     targetPosition - toTransition.position
                     );
 
-                GameSceneManager.instance.SwitchScene(sceneNameToTransition, targetPosition);
+                GameSceneManager.instance.InitSwitchScene(sceneNameToTransition, targetPosition);
                 break;
         }
     }
