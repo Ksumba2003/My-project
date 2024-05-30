@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
@@ -30,6 +31,8 @@ public class CropsManager : TimeAgent
 
     public void Tick()
     {
+        List<Vector2Int> cropsToRemove = new List<Vector2Int>();
+
         foreach (CropTile cropTile in crops.Values)
         {
             if (cropTile.crop == null) continue;
@@ -48,10 +51,18 @@ public class CropsManager : TimeAgent
             {
                 Debug.Log("I'm done growing");
                 cropTile.renderer.sprite = null;
-                crops.Remove(cropTile.renderer.transform);
+                var crop = crops.First(c => c.Value == cropTile);
+                cropsToRemove.Add(crop.Key);
                 Instantiate(cropTile.crop.prefab, cropTile.renderer.transform);
                 cropTile.crop = null;
+                
             }
+        }
+
+        foreach (var crop in cropsToRemove)
+        {
+            Destroy(crops[crop].renderer);
+            crops.Remove(crop);
         }
     }
 

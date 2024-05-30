@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wheat
   m_EditorClassIdentifier: 
   Name: Wheat
-  stackable: 0
+  stackable: 1
   icon: {fileID: -1349699803, guid: e1839de213fe8ea4eb75171825000dee, type: 3}
   onAction: {fileID: 0}
   onTileMapAction: {fileID: 0}
